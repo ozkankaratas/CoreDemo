@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-	public class BlogManager : IBlogService
+	public class BlogReadAll : IBlogService
 	{
 		IBlogDal _blogDal;
 
-		public BlogManager(IBlogDal blogDal)
+		public BlogReadAll(IBlogDal blogDal)
 		{
 			_blogDal = blogDal;
 		}
@@ -27,25 +27,29 @@ namespace BusinessLayer.Concrete
 		{
 			throw new NotImplementedException();
 		}
+		public void UpdateBlog(Blog category)
+		{
+			throw new NotImplementedException();
+		}
 
+		public List<Blog> GetAllBlogsByCategory()
+		{
+			return _blogDal.GetWithCategory();
+		}
+
+		public Blog GetById(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Blog> GetBlogByID(int id)
+		{
+			return _blogDal.GetAll(x => x.BlogID == id);
+		}
 		public List<Blog> GetAllBlogs()
 		{
 			return _blogDal.GetAll();
 		}
 
-        public List<Blog> GetAllBlogsByCategory()
-        {
-			return _blogDal.GetWithCategory();
-        }
-
-        public Blog GetBlogById(int id)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void UpdateBlog(Blog category)
-		{
-			throw new NotImplementedException();
-		}
 	}
 }

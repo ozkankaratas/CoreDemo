@@ -13,7 +13,7 @@ namespace BusinessLayer.Abstract
 		void DeleteBlog(Blog category);
 		void UpdateBlog(Blog category);
 		List<Blog> GetAllBlogs();
-		Blog GetBlogById(int id);
+		Blog GetById(int id);
 		List<Blog> GetAllBlogsByCategory();
 	}
 }
