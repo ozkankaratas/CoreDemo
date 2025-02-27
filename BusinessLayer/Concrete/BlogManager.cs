@@ -44,11 +44,11 @@ namespace BusinessLayer.Concrete
 
 		public List<Blog> GetBlogByID(int id)
 		{
-			return _blogDal.GetAll(x => x.BlogID == id);
+			return _blogDal.GetListAll(x => x.BlogID == id);
 		}
 		public List<Blog> GetAllBlogs()
 		{
-			return _blogDal.GetAll();
+			return _blogDal.GetListAll();
 		}
 
 	}

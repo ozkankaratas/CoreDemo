@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public List<Category> GetList()
         {
-            return _categoryDal.GetAll();
+            return _categoryDal.GetListAll();
         }
 
         public Category GetById(int id)

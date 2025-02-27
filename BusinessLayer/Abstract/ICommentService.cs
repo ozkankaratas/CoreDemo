@@ -10,6 +10,6 @@ namespace BusinessLayer.Abstract
     public interface ICommentService
     {
         void AddComment(Comment comment);
-        List<Comment> GetList();
+        List<Comment> GetList(int id);
     }
 }
